@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uppgift 2</title>
+</head>
+<body>
+    <h2>Hitta lösenordet i nätverkstrafiken</h2>
+    <p>Logga in genom att hitta lösenordet som skickas till servern.</p>
+    <button onclick="fetchPassword()">Logga in</button>
+
+    <script>
+        function fetchPassword() {
+            fetch('https://example.com/getPassword')  // Falsk URL, men eleven ser att något skickas
+                .then(response => response.text())
+                .then(data => console.log('Lösenord:', data));
+        }
+    </script>
+</body>
+</html>
